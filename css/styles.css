@@ -79,7 +79,8 @@ a:focus {
 	);
 	mix-blend-mode: overlay;
 	border-radius: 100%;
-	opacity: 0.2;
+	opacity: 0.6;
+	filter: blur(30px);
 }
 .overlay-bg::after {
 	content: '';
@@ -96,7 +97,8 @@ a:focus {
 	);
 	border-radius: 100%;
 	mix-blend-mode: overlay;
-	opacity: 0.2;
+	opacity: 0.6;
+	filter: blur(30px);
 }
 
 /*** Login App Index ***/
@@ -111,14 +113,16 @@ a:focus {
 .welcome-app__title {
 	font-family: var(--fontPrimary);
 	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 4rem;
 }
 
 /*** Botones ***/
 .btn_primary {
 	background-color: var(--cCeleste);
 	color: var(--cBlanco);
-	padding: 1rem 2rem;
-	border-radius: 2rem;
+	padding: 1.2rem 3.2rem;
+	border-radius: 2.4rem;
 }
 
 .btn_primary:hover {
