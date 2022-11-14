@@ -56,6 +56,13 @@ a:focus {
 	border-bottom: 1px solid var(--cVioleta);
 }
 
+/*** Componentes Globales ***/
+.container {
+	width: 90%;
+	max-width: 120rem;
+	margin: 0 auto;
+}
+
 /*** Estilizamos el body ***/
 .overlay-bg {
 	min-height: 100vh;
@@ -135,4 +142,8 @@ a:focus {
 	background-color: var(--cCeleste_focus);
 	color: var(--cBlanco);
 	outline: 0.25rem solid var(--cCeleste);
+}
+
+/*** Header app ***/
+.header-la {
 }
