@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Roboto:wght@400;700&display=swap');
+
+:root {
+	/*** Colores ***/
+	--cAzul: #1a2226;
+	--cBlanco: #ffffff;
+	--cNegro: #1e1e1e;
+	--cGris: #30383b;
+	--cCeleste: #009cd6;
+	--cRosa: #ef88ed;
+	--cMorado: #8350db;
+	--cVioleta: #7269e3;
+
+	/*** Fuentes ***/
+	--fontPrimary: 'Quicksand', sans-serif;
+	--fontSecondary: 'Roboto', sans-serif;
+}
+
+body {
+	background-color: var(--cAzul);
+	color: var(--cBlanco);
+	font-family: var(--fontSecondary);
+}
+
+a {
+	color: var(--cCeleste);
+	text-decoration: unset;
+}
