@@ -62,6 +62,7 @@ button {
 	display: block;
 	padding: 0;
 	margin: 0;
+	cursor: pointer;
 }
 
 img {
@@ -202,9 +203,10 @@ img {
 }
 
 .login-form__control .input-icon {
+	padding: 1rem;
 	position: absolute;
 	right: 0;
-	bottom: calc((49.39px / 2) - 8px);
+	bottom: calc((49.39px / 2) - (36px / 2));
 }
 
 .login-form .btn-primary {
