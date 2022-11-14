@@ -174,3 +174,65 @@ img {
 }
 
 /*** Form Login App ***/
+.login-form {
+	margin: 2rem auto;
+	display: grid;
+	gap: 2rem;
+}
+
+.login-form__control {
+	position: relative;
+}
+
+.login-form__control label {
+	text-transform: uppercase;
+	font-size: 1.1rem;
+	font-weight: 700;
+	display: block;
+}
+
+.login-form__control input {
+	padding: 1.5rem;
+	background-color: transparent;
+	display: block;
+	width: 100%;
+	border: 0;
+	border-bottom: 1px solid var(--cGris);
+	color: var(--cBlanco);
+}
+
+.login-form__control .input-icon {
+	position: absolute;
+	right: 0;
+	bottom: calc((49.39px / 2) - 8px);
+}
+
+.login-form .btn-primary {
+	padding: 2rem;
+	font-family: var(--fontPrimary);
+	font-weight: 400;
+}
+
+/*** Remember Session ***/
+.remember-session {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.remember-session input {
+	display: none;
+}
+
+.remember-session .box {
+	display: block;
+	width: 2rem;
+	height: 2rem;
+	border: 2px solid var(--cGris);
+	border-radius: 0.6rem;
+	margin-right: 0.5rem;
+}
+
+.remember-session input:checked ~ .box {
+	background-color: #009cd6;
+}
