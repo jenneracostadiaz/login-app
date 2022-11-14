@@ -53,3 +53,47 @@ a:focus {
 	color: var(--cVioleta);
 	border-bottom: 1px solid var(--cVioleta);
 }
+
+.overlay-bg {
+	min-height: 100vh;
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	overflow: hidden;
+	background-color: var(--cAzul);
+}
+
+/*** Estilizamos el body ***/
+.overlay-bg::before {
+	content: '';
+	position: absolute;
+	top: -20rem;
+	left: -20rem;
+	width: 40rem;
+	height: 40rem;
+	background: radial-gradient(
+		var(--cRosa),
+		var(--cMorado),
+		var(--cVioleta)
+	);
+	mix-blend-mode: overlay;
+	border-radius: 100%;
+	opacity: 0.2;
+}
+.overlay-bg::after {
+	content: '';
+	position: absolute;
+	top: auto;
+	bottom: -20rem;
+	right: -20rem;
+	width: 40rem;
+	height: 40rem;
+	background: radial-gradient(
+		var(--cRosa),
+		var(--cMorado),
+		var(--cVioleta)
+	);
+	border-radius: 100%;
+	mix-blend-mode: overlay;
+	opacity: 0.2;
+}
