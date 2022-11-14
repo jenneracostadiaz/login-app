@@ -56,6 +56,19 @@ a:focus {
 	border-bottom: 1px solid var(--cVioleta);
 }
 
+button {
+	background: transparent;
+	border: unset;
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
 /*** Componentes Globales ***/
 .container {
 	width: 90%;
@@ -146,4 +159,5 @@ a:focus {
 
 /*** Header app ***/
 .header-la {
+	padding: 2rem 0;
 }
