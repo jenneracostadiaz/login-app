@@ -161,3 +161,16 @@ img {
 .header-la {
 	padding: 2rem 0;
 }
+
+/*** Page Login App ***/
+.page-la {
+	padding: 4rem 0;
+}
+
+.page-la__title,
+.page-la__description {
+	margin: 0;
+	font-family: var(--fontPrimary);
+}
+
+/*** Form Login App ***/
