@@ -118,20 +118,20 @@ a:focus {
 }
 
 /*** Botones ***/
-.btn_primary {
+.btn-primary {
 	background-color: var(--cCeleste);
 	color: var(--cBlanco);
 	padding: 1.2rem 3.2rem;
 	border-radius: 2.4rem;
 }
 
-.btn_primary:hover {
+.btn-primary:hover {
 	background-color: var(--cCeleste_hover);
 	color: var(--cBlanco);
 	box-shadow: 1rem 1rem 3rem var(--cGris);
 }
 
-.btn_primary:focus {
+.btn-primary:focus {
 	background-color: var(--cCeleste_focus);
 	color: var(--cBlanco);
 	outline: 0.25rem solid var(--cCeleste);
