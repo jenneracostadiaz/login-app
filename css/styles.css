@@ -20,22 +20,20 @@
 
 html {
 	box-sizing: border-box;
-	font-size: 62.5%; /* Now 10px = 1rem! */
+	font-size: 62.5%; /* 10px = 1rem */
 }
 
 *,
-*:before,
-*:after {
+*::after,
+*::before {
 	box-sizing: inherit;
-}
-
-* {
 	scroll-behavior: smooth;
 	outline: none;
 }
 
+/*** Estilos Globales ***/
 body {
-	font-size: 1.6rem;
+	font-size: 1.6rem; /* 16px */
 	line-height: 1.7;
 	background-color: var(--cAzul);
 	color: var(--cBlanco);
@@ -53,7 +51,7 @@ a:hover {
 
 a:focus {
 	color: var(--cVioleta);
-	border-bottom: 1px solid var(--cVioleta);
+	border-bottom: 0.1rem solid var(--cVioleta);
 }
 
 button {
@@ -62,88 +60,34 @@ button {
 	display: block;
 	padding: 0;
 	margin: 0;
+}
+
+button:hover {
 	cursor: pointer;
 }
 
-img {
+img,
+svg {
 	max-width: 100%;
 	display: block;
 }
 
-/*** Componentes Globales ***/
+/*** Componentes ***/
+
+/*** -Container ***/
 .container {
 	width: 90%;
 	max-width: 120rem;
 	margin: 0 auto;
 }
 
-/*** Estilizamos el body ***/
-.overlay-bg {
-	min-height: 100vh;
-	position: fixed;
-	inset: 0;
-	z-index: -1;
-	overflow: hidden;
-	background-color: var(--cAzul);
-}
-.overlay-bg::before {
-	content: '';
-	position: absolute;
-	top: -20rem;
-	left: -20rem;
-	width: 40rem;
-	height: 40rem;
-	background: radial-gradient(
-		var(--cRosa),
-		var(--cMorado),
-		var(--cVioleta)
-	);
-	mix-blend-mode: overlay;
-	border-radius: 100%;
-	opacity: 0.6;
-	filter: blur(30px);
-}
-.overlay-bg::after {
-	content: '';
-	position: absolute;
-	top: auto;
-	bottom: -20rem;
-	right: -20rem;
-	width: 40rem;
-	height: 40rem;
-	background: radial-gradient(
-		var(--cRosa),
-		var(--cMorado),
-		var(--cVioleta)
-	);
-	border-radius: 100%;
-	mix-blend-mode: overlay;
-	opacity: 0.6;
-	filter: blur(30px);
-}
-
-/*** Login App Index ***/
-.welcome-app {
-	display: flex;
-	min-height: 100vh;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-}
-
-.welcome-app__title {
-	font-family: var(--fontPrimary);
-	font-weight: 700;
-	text-transform: uppercase;
-	font-size: 4rem;
-}
-
-/*** Botones ***/
+/*** -Botones ***/
 .btn-primary {
 	background-color: var(--cCeleste);
 	color: var(--cBlanco);
-	padding: 1.2rem 3.2rem;
+	padding: 1.5rem 3.2rem;
 	border-radius: 2.4rem;
+	font-size: 1.4rem;
 }
 
 .btn-primary:hover {
@@ -158,12 +102,73 @@ img {
 	outline: 0.25rem solid var(--cCeleste);
 }
 
-/*** Header app ***/
+/*** Etilos del App ***/
+.overlay-bg {
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	overflow: hidden;
+	background-color: var(--cAzul);
+	min-height: 100vh;
+}
+
+.overlay-bg::before {
+	content: '';
+	position: absolute;
+	top: -10rem;
+	left: -15rem;
+	display: block;
+	width: 41.6rem;
+	height: 41.6rem;
+	background: radial-gradient(
+		var(--cRosa),
+		var(--cMorado),
+		var(--cVioleta)
+	);
+	border-radius: 100%;
+	opacity: 0.5;
+	mix-blend-mode: overlay;
+	filter: blur(81px);
+}
+
+.overlay-bg::after {
+	content: '';
+	position: absolute;
+	bottom: -10rem;
+	right: -15rem;
+	display: block;
+	width: 41.6rem;
+	height: 41.6rem;
+	background: radial-gradient(
+		var(--cRosa),
+		var(--cMorado),
+		var(--cVioleta)
+	);
+	border-radius: 100%;
+	opacity: 0.5;
+	mix-blend-mode: overlay;
+	filter: blur(81px);
+}
+
+.welcome-app {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.welcome-app__title {
+	font-family: var(--fontPrimary);
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 4rem;
+}
+
 .header-la {
 	padding: 2rem 0;
 }
 
-/*** Page Login App ***/
 .page-la {
 	padding: 4rem 0;
 }
@@ -174,7 +179,7 @@ img {
 	font-family: var(--fontPrimary);
 }
 
-/*** Form Login App ***/
+/*** Formulario ***/
 .login-form {
 	margin: 2rem auto;
 	display: grid;
@@ -188,34 +193,27 @@ img {
 .login-form__control label {
 	text-transform: uppercase;
 	font-size: 1.1rem;
+	line-height: 1;
 	font-weight: 700;
 	display: block;
 }
 
 .login-form__control input {
 	padding: 1.5rem;
-	background-color: transparent;
-	display: block;
 	width: 100%;
-	border: 0;
-	border-bottom: 1px solid var(--cGris);
+	background-color: transparent;
 	color: var(--cBlanco);
+	border: unset;
+	border-bottom: 1px solid var(--cGris);
 }
 
 .login-form__control .input-icon {
-	padding: 1rem;
 	position: absolute;
 	right: 0;
-	bottom: calc((49.39px / 2) - (36px / 2));
+	bottom: 0;
+	padding: 1.65rem;
 }
 
-.login-form .btn-primary {
-	padding: 2rem;
-	font-family: var(--fontPrimary);
-	font-weight: 400;
-}
-
-/*** Remember Session ***/
 .remember-session {
 	display: flex;
 	justify-content: center;
@@ -230,11 +228,11 @@ img {
 	display: block;
 	width: 2rem;
 	height: 2rem;
-	border: 2px solid var(--cGris);
-	border-radius: 0.6rem;
+	border: 0.2rem solid var(--cGris);
+	border-radius: 0.5rem;
 	margin-right: 0.5rem;
 }
 
 .remember-session input:checked ~ .box {
-	background-color: #009cd6;
+	background-color: var(--cCeleste);
 }
